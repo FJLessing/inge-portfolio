@@ -1,0 +1,8 @@
+#portfolio {
+
+    @include media-breakpoint-up(md) {       
+        main {
+            margin-left: #{$navigation-width + $spacer*1};
+        }
+    }
+}

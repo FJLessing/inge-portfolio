@@ -1,0 +1,11 @@
+#side-navigation {
+    position: fixed;
+    top: 0;
+    left: $spacer;
+
+    width: $navigation-width;
+    height: 100vh;
+    padding-top: 5rem;
+
+    background: $dark;
+}
