@@ -1,14 +1,50 @@
-.welcome-top,
-.welcome-bottom {
-    padding-left: $spacer*2;
-}
-
 .welcome-top {
-    padding-bottom: $spacer;
+    padding: $spacer $spacer*2;
+    background-color: $warm-soft;
+    height: 45vh;
+    margin-bottom: 5vh;
 
     @include media-breakpoint-up(md) {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
     }
+
+    .welcome-top-content.hero {
+        border-top: 5px solid $warm;
+        padding: $spacer $spacer*2 $spacer 0;
+        position: relative;
+        top: 25vh;
+
+        &:after {
+            content: " ";
+            display: block;
+            background-color: $warm-soft;
+            width: 1rem;
+            height: 105%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .self-portrait {
+            max-height: 45vh;
+        }
+    }
+
+    .title {
+        font-size: 7rem;
+    }
+}
+
+.welcome-bottom {
+    padding: $spacer $spacer*2;
+    padding-top: 20vh;
+    background-color: $cold;
+    height: 50vh;
+}
+
+.welcome-top,
+.welcome-bottom {
+    padding-left: $spacer*4;
 }

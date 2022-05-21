@@ -1,0 +1,32 @@
+#logo-design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $spacer*4;
+    font-size: $h4-font-size;
+    padding-right: 3em;
+
+    .mr-0 {
+        align-self: flex-end;
+
+        @include media-breakpoint-up(xxl) {
+            margin-right: 20vw;
+        }
+    }
+
+    .logo {
+        &:last-of-type {
+            margin-bottom: 10vh;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            margin-bottom: 5vh;
+        }
+    }
+
+    .divider {
+        width: calc(100vw - #{$navigation-width + $spacer*2});
+        align-self: flex-start;
+        height: $spacer*2;
+    }
+}

@@ -1,0 +1,28 @@
+.section-title {
+    background: $cold;
+    padding: .5em 1rem;
+    position: absolute;
+    right: $spacer*4;
+    transform: rotate(90deg) translate(100%, 0);
+    transform-origin: top right;
+
+    > h2 {
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        font-weight: 300 !important;
+        font-size: $font-size-base*3;
+        position: relative;
+        transform: translate(50%, 75%);
+    }
+
+    &.left {
+        background: $warm-soft;
+        transform: rotate(-90deg) translate(100%, 0);
+        right: auto;
+        left: $spacer*2;
+
+        > h2 {
+            transform: translate(-25%, 75%);
+        }
+    }
+}

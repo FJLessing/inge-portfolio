@@ -1,0 +1,23 @@
+.divider {
+    display: flex;
+    justify-content: stretch;
+    width: 100%;
+
+    > div {
+        flex-basis: 33%;
+        flex-grow: 1;
+        min-height: $spacer;
+    }
+
+    > div:nth-child(1) {
+        background: $warm-soft;
+    }
+
+    > div:nth-child(2) {
+        background: $cold;
+    }
+
+    > div:nth-child(3) {
+        background: $warm;
+    }
+}

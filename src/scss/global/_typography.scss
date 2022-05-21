@@ -1,9 +1,13 @@
-body, html {
-    font-family: 'Poppins', sans-serif;
-}
-
 .title {
-    font-family: 'Autography', cursive, serif;
+    font-family: $font-family-decorative;
     font-size: 4rem;
     font-weight: 400;
+}
+
+$text-directions: ('left', 'right', 'center');
+
+@each $text-direction in $text-directions {
+    .text-#{$text-direction} {
+        text-align: #{$text-direction};
+    }
 }

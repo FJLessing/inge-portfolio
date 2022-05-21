@@ -1,8 +1,12 @@
 #portfolio {
 
-    @include media-breakpoint-up(md) {       
+    @include media-breakpoint-up(md) {
         main {
-            margin-left: #{$navigation-width + $spacer*1};
+            margin-left: #{$navigation-width + $spacer*2};
         }
+    }
+
+    section {
+        position: relative;
     }
 }
