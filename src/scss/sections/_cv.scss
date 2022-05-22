@@ -1,0 +1,54 @@
+#cv {
+    display: flex;
+    margin: 15vh 0 20vh 0;
+    padding-top: 5vh;
+
+    .download-link {
+        width: auto;
+        margin: auto $spacer*4;
+        background: $warm-soft;
+        transition: transform 0.3s ease-in-out;
+
+        a {
+            color: $indigo;
+            text-decoration: none;
+            display: block;
+            padding: 0 1em;
+            height: 4em;
+            line-height: 4em;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .cv-wrap {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        position: relative;
+
+        img {
+            display: block;
+            width: 80%;
+            height: auto;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        &::before {
+            content: ' ';
+            display: block;
+            pointer-events: none;
+            background: $cold;
+            filter: blur(10px);
+            width: 80%;
+            height: 100%;
+            position: absolute;
+            z-index: 0;
+            transform: translate(-$spacer, $spacer);
+        }
+    }
+}

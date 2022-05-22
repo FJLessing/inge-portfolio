@@ -15,6 +15,9 @@
     }
 
     .logo {
+        position: relative;
+        z-index: 1;
+
         &:last-of-type {
             margin-bottom: 10vh;
         }

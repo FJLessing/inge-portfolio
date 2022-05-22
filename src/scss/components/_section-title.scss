@@ -5,6 +5,7 @@
     right: $spacer*4;
     transform: rotate(90deg) translate(100%, 0);
     transform-origin: top right;
+    z-index: 9;
 
     > h2 {
         font-family: 'Poppins', sans-serif;
@@ -17,9 +18,10 @@
 
     &.left {
         background: $warm-soft;
-        transform: rotate(-90deg) translate(100%, 0);
+        transform: rotate(-90deg) translate(-100%, 0);
+        transform-origin: bottom left;
         right: auto;
-        left: $spacer*2;
+        left: 8em;
 
         > h2 {
             transform: translate(-25%, 75%);

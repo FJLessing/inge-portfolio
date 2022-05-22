@@ -1,0 +1,79 @@
+
+@mixin illustration-accent {
+    content: "";
+    display: block;
+    width: calc(100vw - #{$navigation-width + $spacer*2});
+    height: 10vh;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+}
+
+
+#illustration {
+    .image-wrap {
+        margin: auto;
+    }
+
+    .illustration-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 90%;
+        z-index: 1;
+        padding-left: 10%;
+
+        .image-wrap {
+            flex-basis: 50%;
+            text-align: center;
+            z-index: 1;
+
+            img {
+                max-width: 80%;
+            }
+        }
+
+        &::before {
+            @include illustration-accent();
+            background: $warm;
+            top: 18rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            .colourful-woman img {
+                transform: translate(-15%, -10%);
+            }
+
+            .peony img {
+                transform: scale(.7) translate(-30%, -20%);
+            }
+        }
+    }
+
+    .untitled-artwork {
+        text-align: end;
+        padding-right: $spacer*4;
+        position: relative;
+        z-index: 1;
+
+        .img-fluid {
+            position: relative;
+            z-index: 2;
+        }
+
+        &::after {
+            @include illustration-accent();
+            background: $cold;
+            bottom: 0;
+            transform: translateY(66.6666%);
+            height: 30vh;
+        }
+    }
+
+    .wedding-table {
+        position: relative;
+        z-index: 2;
+        margin-top: 10vh;
+        padding-left: $spacer*4;
+    }
+}

@@ -1,0 +1,33 @@
+#creating-editing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: $spacer*4;
+    padding-right: $spacer*2;
+    border-right: $spacer solid $cold;
+    margin-right: $spacer*2;
+
+    .image-accent-wrap {
+        margin-bottom: 20vh;
+
+        &.cold {
+            align-self: flex-end;
+
+            background-color: $cold;
+            img.accent {
+                transform: translate($spacer*1.5, $spacer*1.5);
+            }
+        }
+
+        &.warm {
+            background-color: $warm-soft;
+            img.accent {
+                transform: translate(-$spacer*1.5, $spacer*1.5);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        border-right: none;
+    }
+}

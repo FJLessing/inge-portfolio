@@ -1,5 +1,6 @@
 #side-navigation {
     position: fixed;
+    z-index: 10;
     top: 0;
     left: $spacer*2;
 
@@ -19,6 +20,12 @@
         .nav-link {
             text-align: center;
             color: white;
+            text-transform: uppercase;
+
+            // &.active,
+            &:hover {
+                color: $warm;
+            }
         }
     }
 }

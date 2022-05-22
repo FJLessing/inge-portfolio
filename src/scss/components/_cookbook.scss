@@ -1,0 +1,16 @@
+#cookbook {
+    margin-top: $spacer*4;
+    margin-left: $spacer;
+
+    .cookbook-page {
+        > img {
+            max-height: 100%;
+            width: auto;
+        }
+    }
+}
+
+.cookbook-details {
+    margin-top: $spacer*2;
+    margin-bottom: $spacer*4;
+}

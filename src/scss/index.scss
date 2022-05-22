@@ -5,6 +5,9 @@
 @import "variables/colours";
 @import "variables/variables";
 
+// Locomotive scroll
+@import"~locomotive-scroll/dist/locomotive-scroll.css";
+
 // Vendor
 @import "~bootstrap/scss/bootstrap";
 @import "~locomotive-scroll/dist/locomotive-scroll.min.css";
@@ -18,6 +21,7 @@
 @import "components/navigation";
 @import "components/dividers";
 @import "components/section-title";
+@import "components/cookbook";
 
 // Sections
 @import "sections/welcome";

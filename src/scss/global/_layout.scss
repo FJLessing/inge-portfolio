@@ -1,4 +1,14 @@
 #portfolio {
+    max-width: 100vw;
+
+    @include media-breakpoint-up(xxl) {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    main {
+        min-height: 100vh;
+    }
 
     @include media-breakpoint-up(md) {
         main {
@@ -8,5 +18,9 @@
 
     section {
         position: relative;
+    }
+
+    [data-scroll-container] {
+        perspective: 1px;
     }
 }

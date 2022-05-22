@@ -19,12 +19,11 @@ mix.browserSync({
         'public/assets/*.js',
         'public/index.html',
         'public/assets/*.webp',
-        'public/assets/*.png',
     ],
 });
 
 // Mix Execution
-mix.js('src/js/app.js', 'public/assets')
+mix.js('src/js/**/*.js', 'public/assets/app.js')
    .sass('src/scss/index.scss', 'public/assets')
    .version().sourceMaps().setPublicPath('public');
 mix.html({
@@ -44,3 +43,5 @@ mix
     to: 'public/assets/images',
   })
 mix.copyDirectory("assets/icons", 'public/assets/icons');
+mix.copyDirectory("assets/favicon", 'public/assets/favicon');
+mix.copy("assets/site.webmanifest", "public/assets/site.webmanifest");
