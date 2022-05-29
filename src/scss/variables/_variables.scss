@@ -1,5 +1,5 @@
 // Portfolio variables
-$navigation-width: 14rem;
+$navigation-width: 12rem;
 
 // Bootstrap options
 
@@ -23,7 +23,7 @@ $enable-important-utilities:  true;
 // Bootstrap Overrides
 
 $font-family-base: 'Poppins', sans-serif;
-$font-family-decorative: 'Autography', cursive, serif;
+$font-family-decorative: 'Autography', 'Poppins', serif;
 
 $grid-breakpoints: (
     xs: 0,

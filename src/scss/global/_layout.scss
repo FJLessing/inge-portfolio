@@ -1,19 +1,8 @@
 #portfolio {
-    max-width: 100vw;
+    padding-left: #{$navigation-width};
 
-    @include media-breakpoint-up(xxl) {
-        max-width: 1920px;
-        margin: 0 auto;
-    }
-
-    main {
-        min-height: 100vh;
-    }
-
-    @include media-breakpoint-up(md) {
-        main {
-            margin-left: #{$navigation-width + $spacer*2};
-        }
+    @include media-breakpoint-up(lg) {
+        padding-left: #{$navigation-width + $spacer*2};
     }
 
     section {
@@ -22,5 +11,10 @@
 
     [data-scroll-container] {
         perspective: 1px;
+
+        @include media-breakpoint-up(xxl) {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
     }
 }

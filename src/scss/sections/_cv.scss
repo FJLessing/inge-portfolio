@@ -1,13 +1,16 @@
 #cv {
     display: flex;
-    margin: 15vh 0 20vh 0;
     padding-top: 5vh;
+    flex-direction: column;
+    margin-bottom: $spacer*4;
 
     .download-link {
         width: auto;
         margin: auto $spacer*4;
         background: $warm-soft;
         transition: transform 0.3s ease-in-out;
+        order: 2;
+        padding: 1em 0;
 
         a {
             color: $indigo;
@@ -16,18 +19,25 @@
             padding: 0 1em;
             height: 4em;
             line-height: 4em;
+            white-space: nowrap;
         }
 
         &:hover {
             transform: scale(1.05);
+        }
+
+        @include media-breakpoint-down(lg) {
+            margin: $spacer*2 auto $spacer*2 $spacer*2;
         }
     }
 
     .cv-wrap {
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-grow: 1;
         position: relative;
+        order: 1;
 
         img {
             display: block;
@@ -49,6 +59,29 @@
             position: absolute;
             z-index: 0;
             transform: translate(-$spacer, $spacer);
+        }
+
+        @include media-breakpoint-down(lg) {
+            margin-left: $spacer*2;
+
+            img {
+                width: 90%;
+                margin-left: 0;
+            }
+        }
+    }
+
+
+
+    @include media-breakpoint-up(lg) {
+        flex-direction: row;
+
+        .download-link {
+            order: 1;
+        }
+
+        .cv-wrap {
+            order: 2;
         }
     }
 }

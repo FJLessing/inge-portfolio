@@ -1,27 +1,15 @@
-#welcome {
-    @include media-breakpoint-up(xxl) {
-        width: calc(100vw - #{$navigation-width + $spacer*2});
-        margin-left: calc((1920px * 0.5) - (100vw * 0.5));
-    }
-}
-
 .welcome-top {
     padding: $spacer $spacer*2;
     background-color: $warm-soft;
-    height: 45vh;
     margin-bottom: 5vh;
+    height: 25vh;
 
-    @include media-breakpoint-up(md) {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
+    display: flex;
+    align-items: center;
 
     .welcome-top-content.hero {
-        border-top: 5px solid $warm;
-        padding: $spacer $spacer*2 $spacer 0;
+        border-top: 10px solid $warm;
         position: relative;
-        top: 25vh;
 
         &:after {
             content: " ";
@@ -35,23 +23,61 @@
         }
 
         .self-portrait {
-            max-height: 45vh;
             background-color: #fff;
             padding: 0 2rem;
+            max-height: 20vh;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+            @include media-breakpoint-up(lg) {
+                max-height: 45vh;
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+
+            img{
+                transform: scale(0.8);
+            }
+
+        }
+
+        @include media-breakpoint-up(lg) {
+            border-width: 5px;
+            padding: $spacer $spacer*2 $spacer 0;
+            top: 25vh;
         }
     }
 
-    .title {
-        font-size: 7rem;
+    @include media-breakpoint-down(lg) {
+        padding-top: 10vh;
+        max-height: 20vh;
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        height: 45vh;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .title {
+            font-size: 7rem;
+        }
     }
 }
 
 .welcome-bottom {
-    padding: $spacer $spacer*2;
-    padding-top: 20vh;
+    padding: $spacer*4 $spacer;
     background-color: $cold;
-    height: 50vh;
+
+    @include media-breakpoint-up(lg) {
+        padding: $spacer $spacer*2;
+        padding-top: 20vh;
+        height: 50vh;
+
+        p {
+            max-width: 1400px;
+        }
+    }
 }
 
 .welcome-top,

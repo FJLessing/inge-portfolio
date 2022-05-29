@@ -25,13 +25,14 @@ mix.browserSync({
 // Mix Execution
 mix.js('src/js/**/*.js', 'public/assets/app.js')
    .sass('src/scss/index.scss', 'public/assets')
-   .version().sourceMaps().setPublicPath('public');
+   .sourceMaps().version().setPublicPath('public');
 mix.html({
     htmlRoot: 'src/html/index.html',
     output: '.',
     inject: true,
     partialRoot: 'src/html/partials',
     layoutRoot: 'src/html/layouts',
+    versioning: true,
     minify: {
         removeComments: true
     }
@@ -45,3 +46,5 @@ mix
 mix.copyDirectory("assets/icons", 'public/assets/icons');
 mix.copyDirectory("assets/favicon", 'public/assets/favicon');
 mix.copy("assets/site.webmanifest", "public/assets/site.webmanifest");
+mix.copy("assets/*.pdf", "public/assets/");
+

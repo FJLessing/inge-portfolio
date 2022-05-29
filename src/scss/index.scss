@@ -10,10 +10,11 @@
 
 // Vendor
 @import "~bootstrap/scss/bootstrap";
-@import "~locomotive-scroll/dist/locomotive-scroll.min.css";
+@import "~locomotive-scroll/src/locomotive-scroll";
 
 
 // Global
+@import "global/mixins";
 @import "global/typography";
 @import "global/layout";
 

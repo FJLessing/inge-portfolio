@@ -25,10 +25,14 @@
         @include media-breakpoint-up(xxl) {
             margin-bottom: 5vh;
         }
+
+        @include media-breakpoint-down(lg) {
+            max-width: 50vw;
+        }
     }
 
     .divider {
-        width: calc(100vw - #{$navigation-width + $spacer*2});
+        @include full-width;
         align-self: flex-start;
         height: $spacer*2;
     }

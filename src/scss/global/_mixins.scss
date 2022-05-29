@@ -1,0 +1,6 @@
+@mixin full-width {
+    width: calc(100vw - #{$navigation-width + $spacer*2});
+    @include media-breakpoint-up(lg) {
+        width: calc(100vw - #{$navigation-width});
+    }
+}

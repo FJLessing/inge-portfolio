@@ -1,11 +1,32 @@
 #cookbook {
     margin-top: $spacer*4;
     margin-left: $spacer;
+    max-width: 100%;
+    overflow-x: hidden;
 
     .cookbook-page {
+        display: flex;
+
         > img {
             max-height: 100%;
             width: auto;
+        }
+
+        &.--left {
+            text-align: right;
+
+            img {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+
+        &.--right{
+            text-align: left;
+
+             img {
+                margin-left: 0;
+            }
         }
     }
 }
